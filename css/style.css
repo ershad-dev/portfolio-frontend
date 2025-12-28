@@ -109,3 +109,16 @@ footer {
     background-color: #007BFF;
     color: white;
 }
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ریسپانسیو کردن کارت‌ها */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+    }
+}
