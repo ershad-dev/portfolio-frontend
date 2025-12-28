@@ -1,168 +1,185 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* فونت لاله‌زار از گوگل */
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
-/* Body */
+/* کل صفحه */
 body {
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: 'Lalezar', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
+/* هدر */
 header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #007BFF;
-    color: white;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
 }
 
-/* Sections */
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
+
+/* پروژه‌ها */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-section {
-    margin-bottom: 40px;
+#projects h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2575fc;
 }
 
-h2 {
-    color: #007BFF;
-    margin-bottom: 15px;
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Skills */
+.project-card {
+  width: 260px;
+  min-height: 350px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.project-card a {
+  margin-top: auto;
+  padding: 8px 15px;
+  background-color: #2575fc;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #6a11cb;
+}
+
+/* مهارت‌ها */
+#skills {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#skills h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #2575fc;
+}
+
 #skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
 }
 
-#skills li {
-    background-color: #e0e0e0;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 5px;
+#skills ul li {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 15px;
+  background-color: #6a11cb;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
 
-/* Projects */
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+#skills ul li:hover {
+  background-color: #2575fc;
 }
 
-.project-item,
-.testimonial-item {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 250px; /* حداقل عرض */
-    max-width: 300px; /* حداکثر عرض کارت */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+/* تماس */
+#contact {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
 
-.project-item:hover,
-.testimonial-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+#contact h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #2575fc;
 }
 
-
-
-
-.project-item h3 {
-    margin-bottom: 10px;
-    color: #007BFF;
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.project-item p {
-    margin-bottom: 15px;
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  background-color: #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-item a {
-    color: white;
-    background-color: #007BFF;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 5px;
+.contact-links a img {
+  width: 24px;
+  height: 24px;
 }
 
-.project-item a:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007BFF;
-    color: white;
-}
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* ریسپانسیو کردن کارت‌ها */
-@media (max-width: 768px) {
-    .project-list {
-        flex-direction: column;
-    }
-}
-/* Testimonials */
-.testimonial-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.testimonial-item {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 300px;  /* اندازه کارت */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.testimonial-item p {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial-item h4 {
-    text-align: right;
-    color: #007BFF;
-}
-
-/* ریسپانسیو برای موبایل */
-@media (max-width: 768px) {
-    .project-list,
-    .testimonial-list {
-        flex-direction: row;
-    }
+.contact-links a:hover {
+  background-color: #2575fc;
+  color: white;
 }
