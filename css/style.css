@@ -67,19 +67,25 @@ h2 {
     gap: 20px;
 }
 
-.project-item {
+.project-item,
+.testimonial-item {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    flex: 1 1 250px;
+    flex: 1 1 250px; /* حداقل عرض */
+    max-width: 300px; /* حداکثر عرض کارت */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-item:hover {
+.project-item:hover,
+.testimonial-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+
+
 
 .project-item h3 {
     margin-bottom: 10px;
@@ -120,5 +126,43 @@ footer {
 @media (max-width: 768px) {
     .project-list {
         flex-direction: column;
+    }
+}
+/* Testimonials */
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 300px;  /* اندازه کارت */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-item h4 {
+    text-align: right;
+    color: #007BFF;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .project-list,
+    .testimonial-list {
+        flex-direction: row;
     }
 }
